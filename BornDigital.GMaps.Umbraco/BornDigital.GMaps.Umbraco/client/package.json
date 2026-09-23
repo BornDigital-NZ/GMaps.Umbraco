@@ -1,0 +1,20 @@
+{
+  "name": "borndigital-gmaps",
+  "private": true,
+  "version": "17.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@umbraco-cms/backoffice": "^17.7.0",
+    "lit": "^3.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "overrides": {
+    "js-yaml": "^4.3.1"
+  }
+}

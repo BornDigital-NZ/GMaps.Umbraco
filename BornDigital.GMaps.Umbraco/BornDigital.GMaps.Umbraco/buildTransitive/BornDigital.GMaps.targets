@@ -1,0 +1,22 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<GMapsFilesPath>$(MSBuildThisFileDirectory)..\wwwroot\App_Plugins\GMaps\**\*.*</GMapsFilesPath>
+	</PropertyGroup>
+
+	<!-- Begin GMaps -->
+
+	<Target Name="CopyBornDigitalGMaps" BeforeTargets="Build">
+		<ItemGroup>
+			<GMapsFiles Include="$(GMapsFilesPath)" />
+		</ItemGroup>
+		<Message Text="Copying BornDigital.GMaps files: $(GMapsFilesPath) - #@(GMapsFiles->Count()) files" Importance="high" />
+		<Copy
+			SourceFiles="@(GMapsFiles)"
+			DestinationFiles="@(GMapsFiles->'$(MSBuildProjectDirectory)\wwwroot\App_Plugins\GMaps\%(RecursiveDir)%(Filename)%(Extension)')"
+			SkipUnchangedFiles="true" />
+	</Target>
+
+	<!-- End GMaps -->
+
+</Project>

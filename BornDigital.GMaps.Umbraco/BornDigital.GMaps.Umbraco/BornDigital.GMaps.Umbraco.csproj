@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <StaticWebAssetBasePath>App_Plugins</StaticWebAssetBasePath>
+    <Company>BornDigital</Company>
+    <PackageTags>Umbraco</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>17.0.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Google Maps location editor plugin for Umbraco. Requires Google Maps API key.</Description>
+    <Copyright>Born Digital Limited</Copyright>
+    <PackageProjectUrl>https://github.com/BornDigital-NZ/GMaps.Umbraco</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Authors>BornDigital</Authors>
+    <RepositoryUrl>https://github.com/BornDigital-NZ/GMaps.Umbraco</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Core" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Exclude the client folder from the NuGet package -->
+    <Content Update="client\**" Pack="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Remove="C:\Users\ChristophKim\AppData\Roaming\SonarLint for Visual Studio\.global\csharp\SonarLint.xml" />
+  </ItemGroup>
+
+</Project>

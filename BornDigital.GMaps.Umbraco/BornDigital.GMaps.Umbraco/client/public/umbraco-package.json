@@ -1,0 +1,90 @@
+{
+    "$schema": "../../umbraco-package-schema.json",
+    "id": "BornDigital.GMaps",
+    "name": "BornDigital GMaps",
+    "version": "17.0.0",
+    "extensions": [
+        {
+            "type": "propertyEditorUi",
+            "alias": "BornDigital.GMaps",
+            "name": "BornDigital Google Maps Editor",
+            "element": "/App_Plugins/BornDigital.GMaps/gmaps-editor.js",
+            "elementName": "bd-gmaps-editor",
+            "meta": {
+                "label": "Google Maps w/ Google Places Autocomplete lookup",
+                "icon": "icon-map-alt",
+                "group": "common",
+                "propertyEditorSchemaAlias": "Umbraco.Plain.String",
+                "settings": {
+                    "properties": [
+                        {
+                            "alias": "key",
+                            "label": "API Key",
+                            "description": "Enter your Google Maps API key",
+                            "propertyEditorUiAlias": "Umb.PropertyEditorUi.TextBox"
+                        },
+                        {
+                            "alias": "lat",
+                            "label": "Latitude",
+                            "description": "Enter your default starting latitude",
+                            "propertyEditorUiAlias": "Umb.PropertyEditorUi.TextBox"
+                        },
+                        {
+                            "alias": "lng",
+                            "label": "Longitude",
+                            "description": "Enter your default starting longitude",
+                            "propertyEditorUiAlias": "Umb.PropertyEditorUi.TextBox"
+                        },
+                        {
+                            "alias": "zoomlevel",
+                            "label": "Zoom level",
+                            "description": "Enter your default zoom level",
+                            "propertyEditorUiAlias": "Umb.PropertyEditorUi.TextBox"
+                        }
+                    ],
+                    "defaultData": [
+                        { "alias": "lat", "value": "51.0441581" },
+                        { "alias": "lng", "value": "3.4609621" },
+                        { "alias": "zoomlevel", "value": "15" }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "localization",
+            "alias": "BornDigital.GMaps.Localization.En",
+            "name": "BornDigital GMaps English Localization",
+            "js": "/App_Plugins/BornDigital.GMaps/lang/en.js",
+            "meta": {
+                "culture": "en"
+            }
+        },
+        {
+            "type": "localization",
+            "alias": "BornDigital.GMaps.Localization.Da",
+            "name": "BornDigital GMaps Danish Localization",
+            "js": "/App_Plugins/BornDigital.GMaps/lang/da.js",
+            "meta": {
+                "culture": "da"
+            }
+        },
+        {
+            "type": "localization",
+            "alias": "BornDigital.GMaps.Localization.De",
+            "name": "BornDigital GMaps German Localization",
+            "js": "/App_Plugins/BornDigital.GMaps/lang/de.js",
+            "meta": {
+                "culture": "de"
+            }
+        },
+        {
+            "type": "localization",
+            "alias": "BornDigital.GMaps.Localization.Nl",
+            "name": "BornDigital GMaps Dutch Localization",
+            "js": "/App_Plugins/BornDigital.GMaps/lang/nl.js",
+            "meta": {
+                "culture": "nl"
+            }
+        }
+    ]
+}
